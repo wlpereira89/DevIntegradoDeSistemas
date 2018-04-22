@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <Name>Database1</Name>
+    <Name>Banco</Name>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectVersion>4.1</ProjectVersion>
     <ProjectGuid>{65920af3-eed6-47d7-a05c-ad2722fbf707}</ProjectGuid>
@@ -67,5 +67,8 @@
   </ItemGroup>
   <ItemGroup>
     <RefactorLog Include="Database1.refactorlog" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Banco.publish.xml" />
   </ItemGroup>
 </Project>

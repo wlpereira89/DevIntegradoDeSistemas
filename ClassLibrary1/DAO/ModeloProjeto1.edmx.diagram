@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="f69b559744ff41909e50488f653e1bf1" Name="Diagram1">
+        <EntityTypeShape EntityType="BancoModel.Cliente" Width="1.5" PointX="2.5" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="BancoModel.DetalhesPedido" Width="1.5" PointX="6.5" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="BancoModel.Endereços" Width="1.5" PointX="0.5" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="BancoModel.Pedido" Width="1.5" PointX="4.5" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="BancoModel.Produto" Width="1.5" PointX="8.5" PointY="0.5" IsExpanded="true" />
+        <AssociationConnector Association="BancoModel.FK_Endereços_ToTable" ManuallyRouted="false" />
+        <AssociationConnector Association="BancoModel.FK_Pedidos_Clientes" ManuallyRouted="false" />
+        <AssociationConnector Association="BancoModel.FK_DetalhesPedido_Pedidos" ManuallyRouted="false" />
+        <AssociationConnector Association="BancoModel.FK_DetalhesPedido_Produtos" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

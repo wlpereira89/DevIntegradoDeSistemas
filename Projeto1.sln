@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27428.2027
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "Database1", "Database1\Database1.sqlproj", "{65920AF3-EED6-47D7-A05C-AD2722FBF707}"
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "Banco", "Database1\Banco.sqlproj", "{65920AF3-EED6-47D7-A05C-AD2722FBF707}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Modelo", "ClassLibrary1\Modelo.csproj", "{86308FF0-F104-4BBB-BE87-850FA4A89949}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,6 +19,10 @@ Global
 		{65920AF3-EED6-47D7-A05C-AD2722FBF707}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{65920AF3-EED6-47D7-A05C-AD2722FBF707}.Release|Any CPU.Build.0 = Release|Any CPU
 		{65920AF3-EED6-47D7-A05C-AD2722FBF707}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{86308FF0-F104-4BBB-BE87-850FA4A89949}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{86308FF0-F104-4BBB-BE87-850FA4A89949}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{86308FF0-F104-4BBB-BE87-850FA4A89949}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{86308FF0-F104-4BBB-BE87-850FA4A89949}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
