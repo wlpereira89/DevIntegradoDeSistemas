@@ -1,7 +1,7 @@
 ﻿CREATE TABLE [dbo].[Endereços]
 (
 	[ClienteID] INT NOT NULL , 
-    [EnderecoID] INT NOT NULL IDENTITY(0,1), 
+    [EnderecoID] INT NOT NULL IDENTITY(1,1), 
     [Rua] NCHAR(100) NULL, 
     [Cidade] NCHAR(100) NULL, 
     [Estado] NCHAR(100) NULL, 

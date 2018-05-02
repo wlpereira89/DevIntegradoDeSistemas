@@ -83,6 +83,7 @@
     <Compile Include="PN\Class1.cs" />
     <Compile Include="PN\pnClientes.cs" />
     <Compile Include="PN\pnEndereço.cs" />
+    <Compile Include="PN\pnProdutos.cs" />
     <Compile Include="PN\povoarBanco.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

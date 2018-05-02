@@ -1,13 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Modelo.PN;
+using System;
 using System.Windows.Forms;
-using Modelo.PN;
 
 namespace Servidor
 {
@@ -23,9 +16,25 @@ namespace Servidor
 
         }
 
-        private void gerarClientes_Click(object sender, EventArgs e)
+        private void gerarDados_Click(object sender, EventArgs e)
         {
-            povoarBanco.gerarCliente();
+            Form2 _f;
+            _f = new Form2();
+            _f.Show();
+            Hide();
+        }
+
+        private void cadastrarProdutos_Click(object sender, EventArgs e)
+        {
+            Form3 _f;
+            _f = new Form3();
+            _f.Show();
+            Hide();
+        }
+
+        private void fechar_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

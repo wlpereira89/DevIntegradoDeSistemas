@@ -1,1 +1,1 @@
-﻿SELECT * FROM endereços
+﻿SELECT * FROM produtos

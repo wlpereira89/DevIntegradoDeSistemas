@@ -1,16 +1,16 @@
 ﻿namespace Servidor
 {
-    partial class Form1
+    partial class Form2
     {
         /// <summary>
-        /// Variável de designer necessária.
+        /// Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
         /// <summary>
-        /// Limpar os recursos que estão sendo usados.
+        /// Clean up any resources being used.
         /// </summary>
-        /// <param name="disposing">true se for necessário descartar os recursos gerenciados; caso contrário, false.</param>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -20,11 +20,11 @@
             base.Dispose(disposing);
         }
 
-        #region Código gerado pelo Windows Form Designer
+        #region Windows Form Designer generated code
 
         /// <summary>
-        /// Método necessário para suporte ao Designer - não modifique 
-        /// o conteúdo deste método com o editor de código.
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent()
         {
@@ -35,45 +35,44 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(148, 39);
+            this.button1.Location = new System.Drawing.Point(106, 12);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(112, 23);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Gerar dados";
+            this.button1.Size = new System.Drawing.Size(102, 23);
+            this.button1.TabIndex = 1;
+            this.button1.Text = "Gerar Clientes";
             this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.gerarDados_Click);
+            this.button1.Click += new System.EventHandler(this.gerarCli_Click);
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(148, 12);
+            this.button2.Location = new System.Drawing.Point(106, 41);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(112, 21);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Cadastrar Produtos";
+            this.button2.Size = new System.Drawing.Size(102, 23);
+            this.button2.TabIndex = 2;
+            this.button2.Text = "Gerar Pedidos";
             this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.cadastrarProdutos_Click);
+            this.button2.Click += new System.EventHandler(this.gerarPedidos_Click);
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(148, 116);
+            this.button3.Location = new System.Drawing.Point(106, 129);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(112, 23);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "Fechar";
+            this.button3.Size = new System.Drawing.Size(102, 23);
+            this.button3.TabIndex = 3;
+            this.button3.Text = "Voltar ao Menu";
             this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.fechar_Click);
+            this.button3.Click += new System.EventHandler(this.back_Click);
             // 
-            // Form1
+            // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(390, 151);
+            this.ClientSize = new System.Drawing.Size(320, 164);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Name = "Form1";
-            this.Text = "Serividor Menu";
-            this.Load += new System.EventHandler(this.Form1_Load);
+            this.Name = "Form2";
+            this.Text = "Geracao Automatica de banco";
             this.ResumeLayout(false);
 
         }
@@ -85,4 +84,3 @@
         private System.Windows.Forms.Button button3;
     }
 }
-

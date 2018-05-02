@@ -37,14 +37,14 @@
             <PropertyRef Name="NroPedido" />
           </Key>
           <Property Name="ClienteID" Type="int" Nullable="false" />
-          <Property Name="NroPedido" Type="int" Nullable="false" />
+          <Property Name="NroPedido" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Data" Type="date" />
         </EntityType>
         <EntityType Name="Produtos">
           <Key>
             <PropertyRef Name="ProdutoID" />
           </Key>
-          <Property Name="ProdutoID" Type="int" Nullable="false" />
+          <Property Name="ProdutoID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Descricao" Type="nchar" MaxLength="100" />
           <Property Name="Preco" Type="float" />
         </EntityType>
