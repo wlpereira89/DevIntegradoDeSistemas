@@ -33,8 +33,9 @@ namespace Servidor
         }
 
         private void fechar_Click(object sender, EventArgs e)
-        {
+        {            
             Application.Exit();
+            Close();
         }
     }
 }
