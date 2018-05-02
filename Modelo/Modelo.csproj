@@ -4,12 +4,12 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{86308FF0-F104-4BBB-BE87-850FA4A89949}</ProjectGuid>
+    <ProjectGuid>{0118DED0-A4F3-49BC-8B73-DA7736A6CDDF}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ClassLibrary1</RootNamespace>
-    <AssemblyName>ClassLibrary1</AssemblyName>
-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <RootNamespace>Modelo</RootNamespace>
+    <AssemblyName>Modelo</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -50,63 +50,61 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
-    <Compile Include="DAO\Cliente.cs">
-      <DependentUpon>ModeloProjeto1.tt</DependentUpon>
+    <Compile Include="DAO\Clientes.cs">
+      <DependentUpon>GeFat.tt</DependentUpon>
     </Compile>
     <Compile Include="DAO\DetalhesPedido.cs">
-      <DependentUpon>ModeloProjeto1.tt</DependentUpon>
+      <DependentUpon>GeFat.tt</DependentUpon>
     </Compile>
     <Compile Include="DAO\Endereços.cs">
-      <DependentUpon>ModeloProjeto1.tt</DependentUpon>
+      <DependentUpon>GeFat.tt</DependentUpon>
     </Compile>
-    <Compile Include="DAO\ModeloProjeto1.Context.cs">
+    <Compile Include="DAO\GeFat.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>ModeloProjeto1.Context.tt</DependentUpon>
+      <DependentUpon>GeFat.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="DAO\ModeloProjeto1.cs">
+    <Compile Include="DAO\GeFat.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>ModeloProjeto1.tt</DependentUpon>
+      <DependentUpon>GeFat.tt</DependentUpon>
     </Compile>
-    <Compile Include="DAO\ModeloProjeto1.Designer.cs">
+    <Compile Include="DAO\GeFat.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>ModeloProjeto1.edmx</DependentUpon>
+      <DependentUpon>GeFat.edmx</DependentUpon>
     </Compile>
-    <Compile Include="DAO\Pedido.cs">
-      <DependentUpon>ModeloProjeto1.tt</DependentUpon>
+    <Compile Include="DAO\Pedidos.cs">
+      <DependentUpon>GeFat.tt</DependentUpon>
     </Compile>
-    <Compile Include="DAO\Produto.cs">
-      <DependentUpon>ModeloProjeto1.tt</DependentUpon>
+    <Compile Include="DAO\Produtos.cs">
+      <DependentUpon>GeFat.tt</DependentUpon>
     </Compile>
-    <Compile Include="PN\Clientes.cs" />
-    <Compile Include="PN\pnProjeto1.cs" />
-    <Compile Include="PN\PovoarBanco.cs" />
+    <Compile Include="PN\pnClientes.cs" />
+    <Compile Include="PN\pnEndereço.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <EntityDeploy Include="DAO\ModeloProjeto1.edmx">
+    <EntityDeploy Include="DAO\GeFat.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>ModeloProjeto1.Designer.cs</LastGenOutput>
+      <LastGenOutput>GeFat.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="DAO\ModeloProjeto1.edmx.diagram">
-      <DependentUpon>ModeloProjeto1.edmx</DependentUpon>
+    <None Include="DAO\GeFat.edmx.diagram">
+      <DependentUpon>GeFat.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
-    <Content Include="DAO\ModeloProjeto1.Context.tt">
+    <Content Include="DAO\GeFat.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>ModeloProjeto1.edmx</DependentUpon>
-      <LastGenOutput>ModeloProjeto1.Context.cs</LastGenOutput>
+      <DependentUpon>GeFat.edmx</DependentUpon>
+      <LastGenOutput>GeFat.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="DAO\ModeloProjeto1.tt">
+    <Content Include="DAO\GeFat.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>ModeloProjeto1.edmx</DependentUpon>
-      <LastGenOutput>ModeloProjeto1.cs</LastGenOutput>
+      <DependentUpon>GeFat.edmx</DependentUpon>
+      <LastGenOutput>GeFat.cs</LastGenOutput>
     </Content>
   </ItemGroup>
   <ItemGroup>
