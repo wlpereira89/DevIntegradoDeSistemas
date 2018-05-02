@@ -45,18 +45,9 @@ namespace Servidor
 
         private void deArquivo_Click(object sender, EventArgs e)
         {
-            OpenFileDialog dialogo = new OpenFileDialog();
-            dialogo.Title = "Procurar arquivos";
-            dialogo.InitialDirectory = AppDomain.CurrentDomain.BaseDirectory;
-            dialogo.Filter = "Arquivos texto (*.csv)|*.csv";
-            DialogResult resposta = dialogo.ShowDialog();
-            if (resposta == DialogResult.OK)
-            {
-                if (pnProdutos.novosProdutosCsv(dialogo.FileName,';'))
-                    MessageBox.Show("Cadastrado com sucesso");
-                else
-                    MessageBox.Show("Ocorreu um erro no cadastro");
-            }
+            Form4 _f = new Form4();
+            _f.Show();
+            
         }
     }
 }
