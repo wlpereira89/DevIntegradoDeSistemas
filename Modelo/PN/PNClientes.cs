@@ -8,26 +8,32 @@ namespace Modelo.PN
 {
     public static class pnClientes
     {
+
         public static bool novoCliente(String nome, String rua, String cidade, String estado)
         {
             try
             {
                 GeFatEntities db = new GeFatEntities();
-                Clientes c = new Clientes
+
+                //List<Clientes> lista = db.Clientes.ToList();
+                Clientes c;
+                c = new Clientes
                 {
                     Nome = nome
                 };
 
                 db.Clientes.Add(c);
+                int id = c.ClienteID;
                 Endereços endereco = new Endereços
                 {
                     ClienteID = c.ClienteID,
                     Rua = rua,
                     Cidade = cidade,
-                    Estado = estado
+                    Estado = estado,
+                    Clientes = c                    
                 };
                 pnEndereço.novoEndereco(endereco);
-                db.SaveChanges();
+
 
                 return true;
             }

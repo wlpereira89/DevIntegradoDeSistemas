@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Modelo.PN;
 
 namespace Servidor
 {
@@ -15,6 +16,16 @@ namespace Servidor
         public Form1()
         {
             InitializeComponent();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void gerarClientes_Click(object sender, EventArgs e)
+        {
+            povoarBanco.gerarCliente();
         }
     }
 }
