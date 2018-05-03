@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Modelo.PN;
 
-namespace Servidor
+namespace App
 {
     public partial class Form2 : Form
     {

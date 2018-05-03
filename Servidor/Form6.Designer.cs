@@ -1,6 +1,6 @@
 ﻿namespace App
 {
-    partial class Form2
+    partial class Form6
     {
         /// <summary>
         /// Required designer variable.
@@ -35,44 +35,43 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(106, 12);
+            this.button1.Location = new System.Drawing.Point(156, 12);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(102, 23);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Gerar Clientes";
+            this.button1.Size = new System.Drawing.Size(111, 23);
+            this.button1.TabIndex = 0;
+            this.button1.Text = "Gerar Faturamento";
             this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.gerarCli_Click);
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(106, 41);
+            this.button2.Location = new System.Drawing.Point(156, 90);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(102, 23);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "Gerar Pedidos";
+            this.button2.Size = new System.Drawing.Size(111, 23);
+            this.button2.TabIndex = 1;
+            this.button2.Text = "Voltar ao menu";
             this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.gerarPedidos_Click);
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(106, 129);
+            this.button3.Location = new System.Drawing.Point(156, 41);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(102, 23);
-            this.button3.TabIndex = 3;
-            this.button3.Text = "Voltar ao Menu";
+            this.button3.Size = new System.Drawing.Size(111, 23);
+            this.button3.TabIndex = 2;
+            this.button3.Text = "Relatorios";
             this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.back_Click);
+            this.button3.Click += new System.EventHandler(this.Relatorios_Click);
             // 
-            // Form2
+            // Form6
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(320, 164);
+            this.ClientSize = new System.Drawing.Size(401, 144);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Name = "Form2";
-            this.Text = "Geracao Automatica de banco";
+            this.Name = "Form6";
+            this.Text = "Faturamento";
             this.ResumeLayout(false);
 
         }

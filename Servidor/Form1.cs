@@ -2,7 +2,7 @@
 using System;
 using System.Windows.Forms;
 
-namespace Servidor
+namespace App
 {
     public partial class Form1 : Form
     {
@@ -36,6 +36,14 @@ namespace Servidor
         {            
             Application.Exit();
             Close();
+        }
+
+        private void faturamento_Click(object sender, EventArgs e)
+        {
+            Form6 _f;
+            _f = new Form6();
+            _f.Show();
+            Hide();            
         }
     }
 }

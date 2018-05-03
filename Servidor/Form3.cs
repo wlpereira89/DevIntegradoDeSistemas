@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Modelo.PN;
 using Modelo.DAO;
-namespace Servidor
+namespace App
 {
     public partial class Form3 : Form
     {

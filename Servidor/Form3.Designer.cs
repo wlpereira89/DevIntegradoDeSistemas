@@ -1,4 +1,4 @@
-﻿namespace Servidor
+﻿namespace App
 {
     partial class Form3
     {
