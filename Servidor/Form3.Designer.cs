@@ -53,7 +53,7 @@
             this.label2.Location = new System.Drawing.Point(29, 72);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(35, 13);
-            this.label2.TabIndex = 1;
+            this.label2.TabIndex = 0;
             this.label2.Text = "Preço";
             // 
             // price
@@ -75,14 +75,14 @@
             this.desc.Location = new System.Drawing.Point(122, 34);
             this.desc.Name = "desc";
             this.desc.Size = new System.Drawing.Size(251, 20);
-            this.desc.TabIndex = 3;
+            this.desc.TabIndex = 1;
             // 
             // Cadastrar
             // 
             this.Cadastrar.Location = new System.Drawing.Point(29, 123);
             this.Cadastrar.Name = "Cadastrar";
             this.Cadastrar.Size = new System.Drawing.Size(133, 23);
-            this.Cadastrar.TabIndex = 4;
+            this.Cadastrar.TabIndex = 3;
             this.Cadastrar.Text = "Cadastrar";
             this.Cadastrar.UseVisualStyleBackColor = true;
             this.Cadastrar.Click += new System.EventHandler(this.cadastrar_Click);
@@ -102,7 +102,7 @@
             this.button1.Location = new System.Drawing.Point(240, 123);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(133, 23);
-            this.button1.TabIndex = 6;
+            this.button1.TabIndex = 4;
             this.button1.Text = "Cadastrar a partir de csv";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.deArquivo_Click);

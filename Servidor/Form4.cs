@@ -46,7 +46,7 @@ namespace Servidor
             this.button1.Location = new System.Drawing.Point(86, 41);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 0;
+            this.button1.TabIndex = 2;
             this.button1.Text = "Ok";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.ok_Click);
@@ -57,7 +57,7 @@ namespace Servidor
             this.label1.Location = new System.Drawing.Point(29, 18);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(109, 13);
-            this.label1.TabIndex = 1;
+            this.label1.TabIndex = 0;
             this.label1.Text = "Separador do arquivo";
             // 
             // textBox1
@@ -65,7 +65,7 @@ namespace Servidor
             this.textBox1.Location = new System.Drawing.Point(156, 15);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(39, 20);
-            this.textBox1.TabIndex = 2;
+            this.textBox1.TabIndex = 1;
             // 
             // Form4
             // 

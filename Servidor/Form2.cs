@@ -26,15 +26,17 @@ namespace Servidor
 
         private void gerarPedidos_Click(object sender, EventArgs e)
         {
-
+            Form5 _f;
+            _f = new Form5();
+            _f.Show();
         }
 
         private void back_Click(object sender, EventArgs e)
         {
             Close();
-            Form1 _f1;
-            _f1 = new Form1();
-            _f1.Show();
+            Form1 _f;
+            _f = new Form1();
+            _f.Show();
         }
     }
 }

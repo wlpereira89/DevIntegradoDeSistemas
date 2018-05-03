@@ -28,6 +28,61 @@ namespace Modelo.PN
             }
 
         }
+        public static bool gerarPedidos(int mes)
+        {
+            Pedidos p;
+            DetalhesPedido produto;
+            int nprod;
+            Produtos prod;
+            int atual;
+            try
+            {
+                GeFatEntities db = new GeFatEntities();
+                List<Produtos> prods = db.Produtos.ToList();
+                List<Clientes> clis = db.Clientes.ToList();
+                
+                foreach (var cli in clis)
+                { 
+                    for (int pedPorCli = numeroRd(130, 170); pedPorCli > 0; pedPorCli--)
+                    {
+                        p = new Pedidos
+                        {
+                            Clientes = db.Clientes.Find(cli.ClienteID),                            
+                            Data = new DateTime(2017, mes, numeroRd(1,28))                                
+                        };
+                        db.Pedidos.Add(p);
+                        nprod = numeroRd(1, 19);
+                        //List<int> num = ListaRd(1, prods.Count, nprod); 
+                        while(nprod > 0)
+                        {   
+                            int num = numeroRd(1, prods.Count);
+                            if (db.DetalhesPedido.Find(p.NroPedido, num) == null)
+                            {
+                                prod = db.Produtos.Find(num);
+                                produto = new DetalhesPedido
+                                {
+                                    Pedidos = p,
+                                    Produtos = prod,
+                                    Qtde = numeroRd(1, 5),
+                                    Preco = prod.Preco
+                                };
+                                nprod--;
+                                db.DetalhesPedido.Add(produto);
+                            }
+                        }
+                        db.SaveChanges();
+                    }
+                    
+                }                      
+                        
+
+                return true;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
         public static List<Object> listarDeArq(string arquivo)
         {
             String arq = AppDomain.CurrentDomain.BaseDirectory + arquivo;
@@ -69,10 +124,30 @@ namespace Modelo.PN
             }
             return linhas;
         }
+
         private static int numeroRd(int min, int max)
         {
             Random random = new Random();
             return random.Next(min, max);
+        }
+        public static List<int> ListaRd(int min, int max, int tamanho)
+        {
+            List<int> lista= new List<int>();
+            int rand;
+            for (int i = 0; i < tamanho; i++)
+            {
+                rand = numeroRd(min, max);
+                if (!lista.Contains(rand))
+                {
+                    lista.Add(rand);
+                }
+                else
+                {
+                    i--;
+                }
+                
+            }
+            return lista;
         }
     }
 }

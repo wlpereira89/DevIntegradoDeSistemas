@@ -38,7 +38,7 @@
             this.button1.Location = new System.Drawing.Point(148, 39);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(112, 23);
-            this.button1.TabIndex = 0;
+            this.button1.TabIndex = 2;
             this.button1.Text = "Gerar dados";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.gerarDados_Click);
@@ -58,7 +58,7 @@
             this.button3.Location = new System.Drawing.Point(148, 116);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(112, 23);
-            this.button3.TabIndex = 2;
+            this.button3.TabIndex = 3;
             this.button3.Text = "Fechar";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.fechar_Click);
