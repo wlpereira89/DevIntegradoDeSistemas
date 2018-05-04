@@ -14,6 +14,7 @@
         <AssociationConnector Association="BancoModel.FK_Pedidos_Clientes" ManuallyRouted="false" />
         <AssociationConnector Association="BancoModel.FK_DetalhesPedido_Pedidos" ManuallyRouted="false" />
         <AssociationConnector Association="BancoModel.FK_DetalhesPedido_Produtos" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="BancoModel.CoreData" Width="1.5" PointX="5.375" PointY="0.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

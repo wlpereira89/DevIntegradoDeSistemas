@@ -1,1 +1,1 @@
-﻿SELECT * FROM pedidos
+﻿SELECT * from CoreData;

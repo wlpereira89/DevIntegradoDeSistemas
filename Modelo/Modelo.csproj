@@ -53,6 +53,9 @@
     <Compile Include="DAO\Clientes.cs">
       <DependentUpon>GeFat.tt</DependentUpon>
     </Compile>
+    <Compile Include="DAO\CoreData.cs">
+      <DependentUpon>GeFat.tt</DependentUpon>
+    </Compile>
     <Compile Include="DAO\DetalhesPedido.cs">
       <DependentUpon>GeFat.tt</DependentUpon>
     </Compile>
@@ -82,6 +85,7 @@
     </Compile>
     <Compile Include="PN\Class1.cs" />
     <Compile Include="PN\pnClientes.cs" />
+    <Compile Include="PN\pnCoreData.cs" />
     <Compile Include="PN\pnEndereço.cs" />
     <Compile Include="PN\pnFaturamento.cs" />
     <Compile Include="PN\pnProdutos.cs" />

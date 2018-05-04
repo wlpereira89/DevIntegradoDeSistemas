@@ -30,5 +30,6 @@ namespace Modelo.DAO
         public virtual DbSet<Endereços> Endereços { get; set; }
         public virtual DbSet<Pedidos> Pedidos { get; set; }
         public virtual DbSet<Produtos> Produtos { get; set; }
+        public virtual DbSet<CoreData> CoreData { get; set; }
     }
 }

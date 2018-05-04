@@ -12,6 +12,14 @@
           <Property Name="ClienteID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Nome" Type="nchar" MaxLength="100" />
         </EntityType>
+        <EntityType Name="CoreData">
+          <Key>
+            <PropertyRef Name="Vers" />
+          </Key>
+          <Property Name="Vers" Type="int" Nullable="false" />
+          <Property Name="FatIni" Type="date" />
+          <Property Name="FatFim" Type="date" />
+        </EntityType>
         <EntityType Name="DetalhesPedido">
           <Key>
             <PropertyRef Name="NroPedido" />
@@ -98,6 +106,7 @@
         </Association>
         <EntityContainer Name="BancoModelStoreContainer">
           <EntitySet Name="Clientes" EntityType="Self.Clientes" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CoreData" EntityType="Self.CoreData" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="DetalhesPedido" EntityType="Self.DetalhesPedido" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Endereços" EntityType="Self.Endereços" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Pedidos" EntityType="Self.Pedidos" Schema="dbo" store:Type="Tables" />
@@ -244,7 +253,16 @@
             <End Role="Produtos" EntitySet="Produtos" />
             <End Role="DetalhesPedido" EntitySet="DetalhesPedido" />
           </AssociationSet>
+          <EntitySet Name="CoreData" EntityType="BancoModel.CoreData" />
         </EntityContainer>
+        <EntityType Name="CoreData">
+          <Key>
+            <PropertyRef Name="Vers" />
+          </Key>
+          <Property Name="Vers" Type="Int32" Nullable="false" />
+          <Property Name="FatIni" Type="DateTime" Precision="0" />
+          <Property Name="FatFim" Type="DateTime" Precision="0" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -295,6 +313,15 @@
                 <ScalarProperty Name="ProdutoID" ColumnName="ProdutoID" />
                 <ScalarProperty Name="Descricao" ColumnName="Descricao" />
                 <ScalarProperty Name="Preco" ColumnName="Preco" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CoreData">
+            <EntityTypeMapping TypeName="BancoModel.CoreData">
+              <MappingFragment StoreEntitySet="CoreData">
+                <ScalarProperty Name="FatFim" ColumnName="FatFim" />
+                <ScalarProperty Name="FatIni" ColumnName="FatIni" />
+                <ScalarProperty Name="Vers" ColumnName="Vers" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

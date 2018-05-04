@@ -17,6 +17,7 @@ namespace Modelo.PN
             {
                 GeFatEntities db = new GeFatEntities();
                 this.pedidos = db.Pedidos.Where(pedido => pedido.Data >= inicio).Where(pedido => pedido.Data <= fim).ToList();
+                pnCoreData.faturar(inicio, fim);
             }            
             catch (Exception)
             {
