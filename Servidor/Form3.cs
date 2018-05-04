@@ -49,5 +49,10 @@ namespace App
             _f.Show();
             
         }
+
+        private void Form3_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
