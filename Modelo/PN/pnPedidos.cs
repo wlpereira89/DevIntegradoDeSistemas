@@ -30,17 +30,17 @@ namespace Modelo.PN
                 pedidos = db.Pedidos.Where(c => c.ClienteID == clienteID).ToList();
                 listagemPedidos = new List<String>();
                 double? total = 0;
-                foreach(Pedidos p in pedidos)
+                foreach (Pedidos p in pedidos)
                 {
                     double? valor = 0;
                     foreach (DetalhesPedido produto in p.DetalhesPedido)
                     {
-                        if ((produto.Preco!=null)&&(produto.Qtde!=null))
+                        if ((produto.Preco != null) && (produto.Qtde != null))
                             valor += produto.Preco * produto.Qtde;
                     }
 
-                    listagemPedidos.Add("Pedido número: "+p.NroPedido + "       \trealizado na data " + p.Data.Value.ToShortDateString() +"     "+String.Format("no valor total de {0:C2}", valor));
-                    if (valor!=null)
+                    listagemPedidos.Add("Pedido número: " + p.NroPedido + "       \trealizado na data " + p.Data.Value.ToShortDateString() + "     " + String.Format("no valor total de {0:C2}", valor));
+                    if (valor != null)
                         total += valor;
                 }
                 valorPedidos = total;
@@ -92,5 +92,6 @@ namespace Modelo.PN
                 throw;
             }
         }
+        
     }
 }

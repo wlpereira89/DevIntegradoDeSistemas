@@ -86,13 +86,16 @@
     <Compile Include="PN\Class1.cs" />
     <Compile Include="PN\pnClientes.cs" />
     <Compile Include="PN\pnCoreData.cs" />
+    <Compile Include="PN\pnEmail.cs" />
     <Compile Include="PN\pnEndereço.cs" />
     <Compile Include="PN\pnFaturamento.cs" />
     <Compile Include="PN\pnPedidos.cs" />
     <Compile Include="PN\pnProdutos.cs" />
     <Compile Include="PN\pnRelatorio.cs" />
     <Compile Include="PN\povoarBanco.cs" />
+    <Compile Include="PN\produtosMes.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="VM\vmEmail.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -120,5 +123,6 @@
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

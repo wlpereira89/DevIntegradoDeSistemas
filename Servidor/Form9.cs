@@ -20,9 +20,9 @@ namespace App
 
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
         {
-            textBox1.ReadOnly = true;
-            textBox2.ReadOnly = true;
-            textBox3.ReadOnly = true;
+            textBox1.ReadOnly = false;
+            textBox2.ReadOnly = false;
+
         }
 
         private void voltar_Click(object sender, EventArgs e)
@@ -37,7 +37,9 @@ namespace App
         {
             if (radioButton1.Checked)
             {
+                pnRelatorio relatorio = new pnRelatorio(Convert.ToInt32(textBox1.Text), Convert.ToInt32(textBox2.Text), ' ');
 
+                listBox1.DataSource = relatorio.UltimoRelatorio;
             }
             else if (radioButton2.Checked)
             {
@@ -46,7 +48,7 @@ namespace App
             }
             else if (radioButton3.Checked)
             {
-                pnRelatorio relatorio = new pnRelatorio(Convert.ToInt32(textBox3.Text));
+                pnRelatorio relatorio = new pnRelatorio(Convert.ToInt32(textBox1.Text));
                 listBox1.DataSource = relatorio.gerarRelatorio();
             }
             else
@@ -57,16 +59,47 @@ namespace App
 
         private void radioButton3_CheckedChanged(object sender, EventArgs e)
         {
-            textBox1.ReadOnly = true;
+            textBox1.ReadOnly = false;
             textBox2.ReadOnly = true;
-            textBox3.ReadOnly = false;            
         }
 
         private void radioButton2_CheckedChanged(object sender, EventArgs e)
         {
             textBox1.ReadOnly = false;
             textBox2.ReadOnly = false;
-            textBox3.ReadOnly = true;
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (radioButton1.Checked)
+            {
+                pnRelatorio relatorio = new pnRelatorio(Convert.ToInt32(textBox1.Text), Convert.ToInt32(textBox2.Text), ' ');
+                if (!textBox4.Text.Equals(""))
+                    pnEmail.EnviarMailAsync(relatorio.UltimoRelatorio, textBox4.Text);
+                else
+                    MessageBox.Show("E-mail não preenchido");
+            }
+            else if (radioButton2.Checked)
+            {
+                pnRelatorio relatorio = new pnRelatorio(Convert.ToInt32(textBox1.Text), Convert.ToInt32(textBox2.Text));
+                if (!textBox4.Text.Equals(""))
+                    pnEmail.EnviarMailAsync(relatorio.gerarRelatorio(), textBox4.Text);
+                else
+                    MessageBox.Show("E-mail não preenchido");
+
+            }
+            else if (radioButton3.Checked)
+            {
+                pnRelatorio relatorio = new pnRelatorio(Convert.ToInt32(textBox1.Text));
+                if (!textBox4.Text.Equals(""))
+                    pnEmail.EnviarMailAsync(relatorio.gerarRelatorio(), textBox4.Text);
+                else
+                    MessageBox.Show("E-mail não preenchido");
+            }
+            else
+            {
+                MessageBox.Show("Selecione uma opção de relatório");
+            }
         }
     }
 }
