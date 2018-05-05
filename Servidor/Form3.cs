@@ -46,8 +46,6 @@ namespace App
         private void deArquivo_Click(object sender, EventArgs e)
         {
             Form4 _f = new Form4();
-            _f.Show();
-            
         }
 
         private void Form3_Load(object sender, EventArgs e)

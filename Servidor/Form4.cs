@@ -29,8 +29,12 @@ namespace App
             DialogResult resposta = dialogo.ShowDialog();
             if (resposta == DialogResult.OK)
             {
-                arquivo = dialogo.FileName;                
-
+                arquivo = dialogo.FileName;
+                Show();
+            }
+            else
+            {                
+                Close();
             }
         }
 
@@ -82,6 +86,7 @@ namespace App
 
         private void ok_Click(object sender, EventArgs e)
         {
+            
             if (pnProdutos.novosProdutosCsv(arquivo, Convert.ToChar(textBox1.Text))){
                 MessageBox.Show("Cadastrado com sucesso");
             }

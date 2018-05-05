@@ -18,7 +18,7 @@ namespace App
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void gerarFaturamento_Click(object sender, EventArgs e)
         {
             Form7 _f;
             _f = new Form7();
@@ -27,12 +27,23 @@ namespace App
 
         private void Relatorios_Click(object sender, EventArgs e)
         {
-            if (App.Program.Faturamento == null)
+            if (App.Global.Faturamento == null)
                 MessageBox.Show("Para verificar os relatórios o faturamento deve ser fechado");
             else
             {
-
+                Close();
+                Form11 _f;
+                _f = new Form11();
+                _f.Show();
             }
+        }
+
+        private void voltar_Click(object sender, EventArgs e)
+        {
+            Close();
+            Form1 _f;
+            _f = new Form1();
+            _f.Show();
         }
     }
 }

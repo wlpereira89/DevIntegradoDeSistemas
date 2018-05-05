@@ -54,5 +54,33 @@ namespace Modelo.PN
                 throw;
             }
         }
+        public static List<Clientes>listar()
+        {
+            try
+            {
+                GeFatEntities db = new GeFatEntities();
+                return db.Clientes.ToList();
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+        public static List<String> listarNomes()
+        {
+            try
+            {
+                GeFatEntities db = new GeFatEntities();
+                List<Clientes> clientes = db.Clientes.ToList();
+                List<String> nomes = new List<String>();
+                foreach (Clientes cliente in clientes)
+                    nomes.Add(cliente.Nome);
+                return nomes;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
     }
 }

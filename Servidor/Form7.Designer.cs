@@ -52,6 +52,7 @@
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(225, 20);
             this.dateTimePicker1.TabIndex = 1;
+            this.dateTimePicker1.Value = new System.DateTime(2017, 7, 1, 0, 0, 0, 0);
             // 
             // dateTimePicker2
             // 
@@ -59,6 +60,7 @@
             this.dateTimePicker2.Name = "dateTimePicker2";
             this.dateTimePicker2.Size = new System.Drawing.Size(225, 20);
             this.dateTimePicker2.TabIndex = 2;
+            this.dateTimePicker2.Value = new System.DateTime(2017, 7, 31, 0, 0, 0, 0);
             // 
             // label1
             // 
@@ -101,6 +103,7 @@
             this.Controls.Add(this.button1);
             this.Name = "Form7";
             this.Text = "Fechar Faturamento";
+            this.Load += new System.EventHandler(this.Form7_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

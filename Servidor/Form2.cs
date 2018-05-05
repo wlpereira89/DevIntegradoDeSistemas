@@ -38,5 +38,10 @@ namespace App
             _f = new Form1();
             _f.Show();
         }
+
+        private void Form2_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -35,7 +35,7 @@ namespace App
         private void fechar_Click(object sender, EventArgs e)
         {            
             Application.Exit();
-            Close();
+                
         }
 
         private void faturamento_Click(object sender, EventArgs e)

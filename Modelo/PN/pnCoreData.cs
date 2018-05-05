@@ -74,5 +74,23 @@ namespace Modelo.PN
                 throw;
             }
         }
+        public static List<DateTime?>datasFaturadas()
+        {
+            try
+            {
+                GeFatEntities db = new GeFatEntities();
+
+                int atual = db.CoreData.ToList().Max(c=>c.Vers);
+                CoreData dadosAtutal = db.CoreData.Find(atual);
+                List<DateTime?> datas = new List<DateTime?>();
+                datas.Add(dadosAtutal.FatIni);
+                datas.Add(dadosAtutal.FatFim);
+                return datas;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
     }
 }

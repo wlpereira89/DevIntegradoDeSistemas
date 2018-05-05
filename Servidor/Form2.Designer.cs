@@ -73,6 +73,7 @@
             this.Controls.Add(this.button1);
             this.Name = "Form2";
             this.Text = "Geracao Automatica de banco";
+            this.Load += new System.EventHandler(this.Form2_Load);
             this.ResumeLayout(false);
 
         }
