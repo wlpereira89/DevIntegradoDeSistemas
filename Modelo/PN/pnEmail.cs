@@ -38,27 +38,50 @@ namespace Modelo.PN
         public static async Task EnviarMailAsync(List<String> mensagem, string para)
         //public ActionResult Contact(vmFormularioEmail model)
         {
-            var body = "<p> {0} </p>";
-            var message = new MailMessage();
-            message.To.Add(new MailAddress(para)); //Destinatário
-            message.From = new MailAddress("stdutfpr@gmail.com"); //Remetente
-            message.Subject = "Suporte do Site de Eventos";
-            foreach (String m in mensagem)
-                message.Body += string.Format(body, m);            
-            message.IsBodyHtml = true;
-            using (var smtp = new SmtpClient())
+            
+            
+            using (var doc = new PdfSharp.Pdf.PdfDocument())
             {
-                var credential = new NetworkCredential
+                var page = doc.AddPage();
+                var graphics = PdfSharp.Drawing.XGraphics.FromPdfPage(page);
+                var textFormatter = new PdfSharp.Drawing.Layout.XTextFormatter(graphics);
+                var font = new PdfSharp.Drawing.XFont("Arial", 14);
+                
+                int i = 0;
+                foreach (String m in mensagem)
                 {
-                    UserName = "devsist.arqueiro@gmail.com", // Seu E-mail
-                    Password = "Arqueiros73" // Sua Senha
-                };
-                smtp.Credentials = credential;
-                smtp.Host = "smtp.gmail.com";
-                smtp.Port = 587;
-                smtp.EnableSsl = true;
-                await smtp.SendMailAsync(message);
+                    textFormatter.DrawString(m + "\n", font, PdfSharp.Drawing.XBrushes.Red, new PdfSharp.Drawing.XRect(0, i, page.Width, page.Height));
+                    i += 20;
+                }
+                    
+                doc.Save(AppDomain.CurrentDomain.BaseDirectory + "mail2.pdf");
+                doc.Close();
+                
+                var message = new MailMessage();
+                message.To.Add(new MailAddress(para)); //Destinatário
+                message.From = new MailAddress("stdutfpr@gmail.com"); //Remetente
+                message.Subject = "Suporte do Site de Eventos";
+                message.Attachments.Add(new Attachment(AppDomain.CurrentDomain.BaseDirectory + "mail.pdf"));
+
+                message.IsBodyHtml = true;
+
+                using (var smtp = new SmtpClient())
+                {
+                    var credential = new NetworkCredential
+                    {
+                        UserName = "devsist.arqueiro@gmail.com", // Seu E-mail
+                        Password = "Arqueiros73" // Sua Senha
+                    };
+                    smtp.Credentials = credential;
+                    smtp.Host = "smtp.gmail.com";
+                    smtp.Port = 587;
+                    smtp.EnableSsl = true;
+                    
+                    await smtp.SendMailAsync(message) ;
+                }
             }
+
+            
         }
 
     }
